@@ -23,16 +23,30 @@ body {
     height: 60vh;
     width: 80vw;
     position: relative;
+    display: flex;
 }
 
 .object {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .button-carousel {
     display: flex;
-    position: absolute;
+    position: relative;
     flex-direction: column;
+    gap: 300px;
+    left: 50%;
+    transform: translatex(-50%);
 }
+
+.button-carousel button {
+    font-size: 30px;
+    height: 100%;
+    
+}
+
