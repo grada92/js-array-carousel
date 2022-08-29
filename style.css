@@ -40,8 +40,9 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    gap: 439px;
+    gap: 415px;
     left: 50%;
+    top: 10px;
     transform: translatex(-50%);
 }
 
@@ -56,20 +57,24 @@ body {
 
 #previous {
     border-radius: 50%;
+    opacity: 0.3;
 }
 
 #next {
     border-radius: 50%;
+    opacity: 0.3;
 }
 
 #previous:hover {
     cursor: pointer;
     background-color: yellow;
+    opacity: 1;
 }
 
 #next:hover {
     cursor: pointer;
     background-color: yellow;
+    opacity: 1;
 }
 
 
