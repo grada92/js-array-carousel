@@ -21,7 +21,7 @@ body {
 
 .carousel {
     height: 60vh;
-    width: 80vw;
+    width: 60vw;
     position: relative;
     display: flex;
 }
@@ -40,18 +40,38 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    gap: 300px;
+    gap: 439px;
     left: 50%;
     transform: translatex(-50%);
 }
 
 .button-carousel button {
-    font-size: 30px;
-    height: 100%;
-    
+    font-size: 40px; 
+    width: 50px; 
 }
 
 .object.active {
     display: inline-block;
 }
+
+#previous {
+    border-radius: 50%;
+}
+
+#next {
+    border-radius: 50%;
+}
+
+#previous:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+#next:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+
+
 
