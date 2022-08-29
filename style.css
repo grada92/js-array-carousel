@@ -12,3 +12,27 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.carousel {
+    height: 60vh;
+    width: 80vw;
+    position: relative;
+}
+
+.object {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.button-carousel {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
