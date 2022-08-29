@@ -33,6 +33,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    display: none;
 }
 
 .button-carousel {
@@ -48,5 +49,9 @@ body {
     font-size: 30px;
     height: 100%;
     
+}
+
+.object.active {
+    display: inline-block;
 }
 
