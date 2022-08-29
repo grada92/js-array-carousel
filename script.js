@@ -39,4 +39,17 @@ nextButton.addEventListener('click',
 
 // Imposto button previous per scorrere immagini indietro
 
-  
+previousButton.addEventListener('click',
+    function(){
+        console.log('mi hai cliccato!');
+
+        const activeImage = document.querySelector('.object.active');
+        console.log(activeImage);
+        const previousElement = activeImage.previousElementSibling;
+        console.log(previousElement);
+        if (previousElement){
+            activeImage.classList.remove('active');
+            previousElement.classList.add('active');
+        }
+    }
+)  
