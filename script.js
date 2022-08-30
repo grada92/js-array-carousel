@@ -2,17 +2,22 @@ console.log('js ok')
 
 const images = ['01', '02' , '03', '04', '05'];
 
+const index = 0;
 
 const container = document.querySelector('.container-carousel');
 
 // Ciclo per immagini 
 for (i = 0 ; i < images.length ; i++) {
     const image = images[i];
-    container.innerHTML += '<img class="object" src="img/'+ image +'.jpg" alt="due" />'
+    const activeClass = i === index ? 'object active' : 'object' // aggiungo condizione per attivare le classi da array
+    container.innerHTML += '<img class="'+ activeClass +'" src="img/'+ image +'.jpg" alt="due" />'
 }
+
+
+
 // Imposto la prima immagine visibile
-const firstImage = document.querySelector('.object');
-firstImage.classList.add('active');
+/*const firstImage = document.querySelector('.object');
+firstImage.classList.add('active');*/
 
 
 const previousButton = document.getElementById('previous');
