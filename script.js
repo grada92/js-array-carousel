@@ -2,14 +2,14 @@ console.log('js ok')
 
 const images = ['01', '02' , '03', '04', '05'];
 
-const index = 0;
+let index = 0;
 
 const container = document.querySelector('.container-carousel');
 
 // Ciclo per immagini 
 for (i = 0 ; i < images.length ; i++) {
     const image = images[i];
-    const activeClass = i === index ? 'object active' : 'object' // aggiungo condizione per attivare le classi da array
+    const activeClass = i === index ? 'object active' : 'object' // aggiungo condizione per attivare le classi da
     container.innerHTML += '<img class="'+ activeClass +'" src="img/'+ image +'.jpg" alt="due" />'
 }
 
@@ -29,14 +29,17 @@ nextButton.addEventListener('click',
     function(){
         console.log('mi hai cliccato');
 
-        const activeImage = document.querySelector('.object.active');
-        console.log(activeImage);
-        const nextElement = activeImage.nextElementSibling; 
-        console.log(nextElement);
+        if (index < images.length -1 ){
+            container.innerHTML='';
+            index++;
+            
+            for (let i = 0; i < images.length; i++){
+                const image = images[i];
+                const activeClass = i === index ? 'object active' : 'object'
 
-        if (nextElement){
-            activeImage.classList.remove('active');
-            nextElement.classList.add('active');
+                container.innerHTML += '<img class="'+ activeClass +'" src="img/'+ image +'.jpg" alt="due" />'
+
+            }
         }
     }
 
@@ -46,15 +49,19 @@ nextButton.addEventListener('click',
 
 previousButton.addEventListener('click',
     function(){
-        console.log('mi hai cliccato!');
+        
+        if (index > 0){
+            container.innerHTML='';
+            index--;
+            
+            for (let i = 0; i < images.length; i++){
+                const image = images[i];
+                const activeClass = i === index ? 'object active' : 'object'
 
-        const activeImage = document.querySelector('.object.active');
-        console.log(activeImage);
-        const previousElement = activeImage.previousElementSibling;
-        console.log(previousElement);
-        if (previousElement){
-            activeImage.classList.remove('active');
-            previousElement.classList.add('active');
+                container.innerHTML += '<img class="'+ activeClass +'" src="img/'+ image +'.jpg" alt="due" />'
+
+            }
         }
+
     }
 )  
